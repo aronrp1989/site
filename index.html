@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- definição, estamos dizendo que esse é um arquivo html -->
+<html lang="pt-BR"> <!-- estamos informando em que língua a página está -->
+<head> <!-- <head></head> é o cabeçalho DO CÓDIGO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aron, A Lenda</title> <!-- Aqui é o titulo da página, o nome que fica na aba-->
+</head>
+<body> <!-- body é o corpo, a estrutura da página -->
+    <header> <!-- Este é o cabeçalho DA PÁGINA -->
+        <h1>Aron, A Lenda</h1> <!-- h1, h2, h3, etc são tags de texto com diferentes tamanhos -->
+
+        <nav> <!-- <nav></nav> Seção de navegação do site -->
+            <ul>  <!-- Lista não ordenada para Links nos menus-->
+                <li><a href="#sobre">Sobre Mim</a></li> <!-- Sobre a tag <a href>O que está em amarelo é o id, o id se conecta a uma tag com id="sobre", em branco o que aparece no site-->
+                <li><a href="projeto">Projetos</a></li>
+                <li><a href="contato">Contato</a></li>
+                <li><a href="https:/google.com.br/" target="blank">Google</a></li> <!-- se escrever o link de uma página no a href, ele redireciona para a pagina e se colocar target="blank" em vez de ele carregar na mesma aba, ele abre em uma página nova-->
+                <!-- <li>Sobre Mim</li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id=""sobre>
+        <h2>Sobre mim</h2>
+
+        <img src="./assets/imagens/cavluz.png" alt="imagem não encontrada: imagem do Cavaleiro da Luz" title="Imagem do Cavaleiro da Luz"> <!-- src = source, onde está a imagem, seja no computador ou um link na internet; alt= um texto que aparece no lugar da img caso ela não exista mais -->
+
+        <article> <!-- tag de artigo onde eu posso criar textos -->
+            <p> <!-- tag p de parágrafo -->
+                Olá! Eu sou o Aron, tenho 3 gatos, e sou mais conhecido como o Cavaleiro da Luz, ou o Combatente Lendário
+            </p>
+        </article>
+
+        <aside> <!-- tag de a parte -->
+            <h3>Habilidades</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </aside>
+    </section>
+
+    <section id="projeto">
+        <h2>Projetos</h2>
+
+        <article>
+            <p>Este foi o primeiro combate com as criaturas demoniacas</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Direitos reservados ao Combatente Lendário e a Luz</p>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Tem uma batalha precisando do Cavaleiro da Luz?</p>
+            <address>
+                E-mail: <a href="mailto:souomaximo@email.com">souomaximo@email.com</a> <br> <!-- Em amarelo tenho o código que faz com que quando a pessoa clique no email, ele redireciona a pessoa para uma ferramenta de envio de email, em branco é o que fica visível no site; a tab <br> é quebra de linha-->
+                Telefone: <a href="99999-CombatenteLendario">99999-CombatenteLendario</a>
+            </address>
+        </section>
+    </footer>
+</body>
+</html>
