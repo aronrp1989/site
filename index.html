@@ -12,8 +12,8 @@
         <nav> <!-- <nav></nav> Seção de navegação do site -->
             <ul>  <!-- Lista não ordenada para Links nos menus-->
                 <li><a href="#sobre">Sobre Mim</a></li> <!-- Sobre a tag <a href>O que está em amarelo é o id, o id se conecta a uma tag com id="sobre", em branco o que aparece no site-->
-                <li><a href="#projeto">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="projeto">Projetos</a></li>
+                <li><a href="contato">Contato</a></li>
                 <li><a href="https:/google.com.br/" target="blank">Google</a></li> <!-- se escrever o link de uma página no a href, ele redireciona para a pagina e se colocar target="blank" em vez de ele carregar na mesma aba, ele abre em uma página nova-->
                 <!-- <li>Sobre Mim</li> -->
             </ul>
@@ -23,11 +23,11 @@
     <section id=""sobre>
         <h2>Sobre mim</h2>
 
-        <img src="./assets/imagens/cavluz.png" alt="imagem não encontrada: imagem do Cavaleiro da Luz" title="Imagem do Cavaleiro da Luz"> <!-- src = source, onde está a imagem, seja no computador ou um link na internet; alt= um texto que aparece no lugar da img caso ela não exista mais -->
+        <img src="./assets/imagens/cavluz.png" alt="imagem não encontrada: imagem do Cavaleiro da Luz" title="Imagem do Cavaleiro da Luz"> <!-- src = source, onde está a imagem, seja no computador ou um link na internet; alt= um texto que aparece no lugar da img caso ela não exista mais; title = aparece o nome da imagem se deixar o mouse em cima dela -->
 
         <article> <!-- tag de artigo onde eu posso criar textos -->
             <p> <!-- tag p de parágrafo -->
-                Olá! Eu sou o Aron, tenho 3 gatos, e sou mais conhecido como o Cavaleiro da Luz, ou o Combatente Lendário. TESTANDO MUDANÇAS
+                Olá! Eu sou o Aron, tenho 3 gatos, e sou mais conhecido como o Cavaleiro da Luz, ou o Combatente Lendário
             </p>
         </article>
 
@@ -50,16 +50,79 @@
         </article>
     </section>
 
+    <section id="habilidades">
+        <h2>Habilidades e tecnologias</h2>
+        
+        <table> <!-- tag para criação de tabelas -->
+            <thead>
+                <tr> <!-- define uma nova linha na tabela -->
+                    <th>Técnologia</th> <!-- tag define uma nova coluna -->
+                    <th>Nível</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+
+            <tbody> <!-- tag para corpo da tabela -->
+                <tr>
+                    <td>HTML</td> <!-- valores das colunas -->
+                    <td>Iniciante</td>
+                    <td>Capaz de construir estruturas de páginas web semânticas e responsivas.</td>
+                </tr>
+
+                <tr>
+                    <td>CSS</td> <!-- valores das colunas -->
+                    <td>Intermediário</td>
+                    <td>Experiência com flexbox, grid e animações CSS.</td>
+                </tr>
+
+                <tr>
+                    <td>JavaScript</td> <!-- valores das colunas -->
+                    <td>Básico</td>
+                    <td>Desenvolvimento de scripts do lado do cliente para.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <footer>
         <p>Direitos reservados ao Combatente Lendário e a Luz</p>
 
         <section id="contato">
             <h2>Contato</h2>
+
             <p>Tem uma batalha precisando do Cavaleiro da Luz?</p>
-            <address>
-                E-mail: <a href="mailto:souomaximo@email.com">souomaximo@email.com</a> <br> <!-- Em amarelo tenho o código que faz com que quando a pessoa clique no email, ele redireciona a pessoa para uma ferramenta de envio de email, em branco é o que fica visível no site; a tab <br> é quebra de linha-->
-                Telefone: <a href="99999-CombatenteLendario">99999-CombatenteLendario</a>
-            </address>
+
+            <form action=""> <!-- tag form é criada para formulário, entre "" iriamos enviar o formulario para um servidor -->
+                <label for="nome">Nome: </label> <!-- tag label é usada para adicionar uma informação ao lado do botão ou do campo para preencher -->
+                <input type="text" id="nome" name="nome" required> <br> <!-- tag input é o que cria botões, campos, etc -->
+                <!-- required quer dizer que a opção é necessária para enviar o formulário, se o campo estiver em branco, ele dá erro pro usuário -->
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" required> <br>
+
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" name="telefone"> <br>
+
+                <label for="assunto">Assunto:</label>
+                <select name="assunto" id="assunto"> <!-- a tag select cria um campo menu cascata com vários opções (tag option) para seleção -->
+                    <option value="orcamento">Orçamento</option> 
+                    <option value="duvida">Dúvida</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <br>
+
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="5"></textarea> <!-- tag para criação de uma área de texto --> <br>
+
+                <input type="checkbox" id="inscricao" name="inscricao">
+                <label for="inscricao">Deseja receber meu newsletter? Fique por dentro.</label>
+
+                <br>
+
+                <input type="submit" value="Enviar mensagem">
+
+                <input type="date">
+            </form>
         </section>
     </footer>
 </body>
